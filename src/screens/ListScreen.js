@@ -8,3 +8,7 @@ const ListScreen = () => {
     </View>
   );
 };
+
+const styles = StyleSheet.create({});
+
+export default ListScreen;
