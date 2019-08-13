@@ -22,7 +22,7 @@ const ListScreen = () => {
         renderItem={({ item }) => {
           return (
             <View>
-              <Text>{item.name}</Text>
+              <Text style={styles.textStyle}>{item.name}</Text>
             </View>
           );
         }}
@@ -31,6 +31,10 @@ const ListScreen = () => {
   );
 };
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  textStyle: {
+    marginVertical: 50
+  }
+});
 
 export default ListScreen;
