@@ -5,7 +5,10 @@ const HomeScreen = () => {
   return (
     <View>
       <Text style={styles.text}>Hello World.</Text>
-      <Button />
+      <Button
+        onPress={() => console.log("button pressed")}
+        title="Go to components demo"
+      />
     </View>
   );
 };
