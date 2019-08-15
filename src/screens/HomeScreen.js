@@ -11,7 +11,9 @@ const HomeScreen = () => {
       />
     </View>
     <View>
-      <TouchableOpacity><Text>Go to list demo</Text></TouchableOpacity>
+      <TouchableOpacity
+      onPress={() => console.log("list pressed")}
+      ><Text>Go to list demo</Text></TouchableOpacity>
     </View>
   );
 };
