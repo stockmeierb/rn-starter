@@ -1,14 +1,14 @@
 import React from "react";
 import { View, Text, StyleSheet } from "react-native";
 
-const imageDetail = () => {
+const ImageDetail = () => {
   return (
     <View>
-      <Text>Hello World</Text>
+      <Text>Hello Detail</Text>
     </View>
   );
 };
 
 const styles = new StyleSheet.create({});
 
-export default imageDetail;
+export default ImageDetail;
