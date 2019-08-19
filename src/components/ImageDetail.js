@@ -1,10 +1,11 @@
 import React from "react";
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text, StyleSheet, Image } from "react-native";
 
-const ImageDetail = () => {
+const ImageDetail = props => {
   return (
     <View>
-      <Text>Hello Detail</Text>
+      <Image source={require("../../assets/beach.jpg")} />
+      <Text>{props.title}</Text>
     </View>
   );
 };
