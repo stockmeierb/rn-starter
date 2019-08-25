@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import { View, Text, StyleSheet, Button } from "react-native";
 
 const CounterScreen = () => {
-  //fix this later
-  let counter = 0;
+  const [counter, setCounter] = useState(0);
+  //array destructuring
+
+  //useState(x) - where x is an initial value. returns a variable and a function which can be used to modify the variable, all in an array
 
   return (
     <View>
@@ -11,13 +13,13 @@ const CounterScreen = () => {
       <Button
         Text="Increase"
         onPress={() => {
-          counter++;
+          setCounter(counter + 1);
         }}
       />
       <Button
         Text="Decrease"
         onPress={() => {
-          counter--;
+          setCounter(counter - 1);
         }}
       />
       />
