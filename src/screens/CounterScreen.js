@@ -29,3 +29,5 @@ const CounterScreen = () => {
 const styles = StyleSheet.create({});
 
 export default CounterScreen;
+
+//Oh look a comment. Sorry I cheated today.
