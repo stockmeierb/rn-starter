@@ -32,25 +32,27 @@ const SquareScreen = () => {
           ? setGreen(0)
           : setGreen(green + change);
         return;
+      default:
+        return;
     }
   };
 
   return (
     <View>
       <ColorCounter
-        onIncrease={() => setRed(red + COLOR_INCREMENT)}
-        onDecrease={() => setRed(red - COLOR_INCREMENT)}
+        onIncrease={() => setColor("red", COLOR_INCREMENT)}
+        onDecrease={() => setColor("red", -1 * COLOR_INCREMENT)}
         color="Red"
       />
       <ColorCounter
         color="Blue"
-        onIncrease={() => setBlue(blue + COLOR_INCREMENT)}
-        onDecrease={() => setBlue(blue - COLOR_INCREMENT)}
+        onIncrease={() => setColor("blue", COLOR_INCREMENT)}
+        onDecrease={() => setColor("blue", -1 * COLOR_INCREMENT)}
       />
       <ColorCounter
         color="Green"
-        onIncrease={() => setGreen(green + COLOR_INCREMENT)}
-        onDecrease={() => setGreen(green - COLOR_INCREMENT)}
+        onIncrease={() => setColor("green", COLOR_INCREMENT)}
+        onDecrease={() => setColor("green", -1 * COLOR_INCREMENT)}
       />
       <View
         style={{
