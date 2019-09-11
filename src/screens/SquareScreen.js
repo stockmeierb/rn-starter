@@ -9,13 +9,15 @@ const reducer = (state, action) => {
 
   switch (action.color) {
     case "red":
-      return;
+      return { ...state, red: state.red + action.amount };
     case "blue":
-      return;
+      return { ...state, blue: state.blue + action.amount };
+
     case "green":
-      return;
+      return { ...state, green: state.green + action.amount };
+
     default:
-      return;
+      return state;
   }
 };
 
