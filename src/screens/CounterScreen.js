@@ -1,25 +1,34 @@
-import React, { useState } from "react";
+import React, { useReducer } from "react";
 import { View, Text, StyleSheet, Button } from "react-native";
 
+const CHANGE = 1;
+
+const reducer = (state, action) => {
+  switch (action.type) {
+    case "add":
+      return { ...state, counter: state.counter + CHANGE };
+    case "sub":
+      return { ...state, counter: state.counter - CHANGE };
+    default:
+      return state;
+  }
+};
+
 const CounterScreen = () => {
-  const [counter, setCounter] = useState(0);
-  //array destructuring
-
-  //useState(x) - where x is an initial value. returns a variable and a function which can be used to modify the variable, all in an array
-
+  const [state, dispatch] = useReducer(reducer, { counter: 0 });
   return (
     <View>
       <Text>Count: {counter}</Text>
       <Button
         Text="Increase"
         onPress={() => {
-          setCounter(counter + 1);
+          dispatch({ type: "add", payload: CHANGE });
         }}
       />
       <Button
         Text="Decrease"
         onPress={() => {
-          setCounter(counter - 1);
+          dispatch({ type: "sub", payload: CHANGE });
         }}
       />
       />
@@ -29,5 +38,3 @@ const CounterScreen = () => {
 const styles = StyleSheet.create({});
 
 export default CounterScreen;
-
-//Oh look a comment. Sorry I cheated today.
